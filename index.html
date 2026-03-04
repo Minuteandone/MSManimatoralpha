@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MSM Animator Alpha</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>MSM Animator Alpha</h1>
+    <p>Simple browser animation maker inspired by Moho, with Scratch-style stage coordinates.</p>
+  </header>
+
+  <main>
+    <section class="stage-panel">
+      <canvas id="stage" width="960" height="720" aria-label="Animation stage"></canvas>
+      <div class="playback-controls">
+        <button id="playBtn">▶ Play</button>
+        <button id="stopBtn">■ Stop</button>
+        <label>
+          FPS
+          <input id="fpsInput" type="number" min="1" max="60" value="24" />
+        </label>
+        <label>
+          Duration (s)
+          <input id="durationInput" type="number" min="0.1" step="0.1" value="4" />
+        </label>
+      </div>
+      <p class="hint">Drag the puppet on stage to pose it, then add keyframes.</p>
+    </section>
+
+    <section class="timeline-panel">
+      <div class="toolbar">
+        <button id="addKeyframeBtn">+ Add Keyframe at Current Time</button>
+        <button id="clearBtn">Clear Timeline</button>
+      </div>
+
+      <div class="scrubber-wrap">
+        <label for="timeInput">Current Time</label>
+        <input id="timeInput" type="range" min="0" max="4" step="0.01" value="0" />
+        <output id="timeValue">0.00s</output>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>X</th>
+            <th>Y</th>
+            <th>Rotation</th>
+            <th>Scale</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="timelineBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="scratch-parity.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
