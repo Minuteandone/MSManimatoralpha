@@ -1,0 +1,123 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #18181c;
+  color: #f5f5f6;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #2c2c33;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+header p {
+  margin: 0.35rem 0 0;
+  color: #b8b8c2;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+section {
+  background: #23232a;
+  border: 1px solid #30303a;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.stage-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#stage {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #c8c8d2;
+}
+
+.playback-controls,
+.toolbar,
+.scrubber-wrap {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 1px solid #4a4a57;
+  background: #353541;
+  color: #f5f5f6;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #40404e;
+}
+
+input[type="number"] {
+  width: 5rem;
+  background: #15151a;
+  border: 1px solid #3d3d49;
+  border-radius: 5px;
+  color: #f5f5f6;
+  padding: 0.2rem 0.3rem;
+}
+
+input[type="range"] {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.6rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid #33333e;
+  padding: 0.4rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.timeline-input {
+  width: 4.5rem;
+}
+
+.hint {
+  margin: 0;
+  color: #a9a9b5;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1020px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
